@@ -2,18 +2,34 @@
   <div class="row">
     <div class="col">
       <h1>Listado de personas</h1>
-      <button class="btn btn-primary" 
-      [disabled]="deshabilitar"
-      (click)="agregarPersona()">Agregar Persona</button>
-      <p> {{mensaje}} </p>
+     
       <app-persona></app-persona>
 
-
       <label> Titulo Persona</label>
-      <input type="text" class="form-control" 
-      (input)="modificarTitulo($event)">
-      {{titulo}}
+      <input type="text" class="form-control" [(ngModel)]="titulo" />
+      {{ titulo }}
+
 
     </div>
+    <div class="col-lg-5">
+      <label > Entrada A</label>
+    <input type="number" class="form-control" [(ngModel)]="A" name="A" placeholder="number 1"/>
+    
+    </div>
+    
+    <div class="col-lg-5">
+      <label> Entrada B</label>
+      <input type="number" class="form-control" [(ngModel)]="B" name="B" placeholder="number 2"/>
+      
+    </div>
+    <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="deshabilitar"
+        (click)="sumar()"
+      >
+        Sumar: 
+      </button> 
+      <p> Resultado: {{ resultado }}</p>
   </div>
 </div>

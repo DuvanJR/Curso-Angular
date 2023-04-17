@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { PersonasComponent } from './personas/personas.component';
 import { ProductosComponent } from './productos/productos.component';
 import { PersonaComponent } from './persona/persona.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PersonaComponent } from './persona/persona.component';
     PersonaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
