@@ -3,4 +3,10 @@
     Apellido: {{ apellido }}
     Edad: {{ edad + 10 }}
 </p>
+<div (keyup)='0'>
+    <label >Repetidor: </label>
+    <input #entrada />
+    {{ entrada.value }}
+
+</div>
 
